@@ -1,0 +1,86 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+a {
+  color: #90A2FF;
+}
+
+a:hover {
+  color: #e56767;
+  text-decoration: underline #e56767;
+}
+
+/* /////////////////////////////////////////////////// */
+/* mobile-menu */
+
+.open #mobile-menu-icon > span:nth-child(1) {
+  transform: translateY(12px) rotate(-135deg);
+}
+.open #mobile-menu-icon > span:nth-child(2) {
+  transform: scale(0);
+}
+.open #mobile-menu-icon > span:nth-child(3) {
+  transform: translateY(-12px) rotate(135deg);
+}
+
+.open #side-bar {
+  width: 40%;
+  opacity: 1;
+}
+
+/* /////////////////////////////////////////////////// */
+/* back */
+
+.back-on #back {
+  display: block;
+}
+
+.login-on #loginBox {
+  display: block;
+}
+
+/* /////////////////////////////////////////////////// */
+/* HalfSelectBox */
+
+.select#HalfSelectBox1 {
+  background-color: #C8CEEE;
+}
+.select#HalfSelectBox2 {
+  background-color: #C8CEEE;
+}

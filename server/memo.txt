@@ -1,0 +1,29 @@
+docker-compose exec web bin/rails generate model User name:string
+
+
+docker-compose exec web bin/rails generate model Equipment name:string category_id:integer image_path:string isbn:integer detail:text Lab_id:integer
+
+
+docker-compose exec web bin/rails generate model Lending_log uesr_id:integer equipment_id:integer loan_date:datetime return_schedule:datetime return_schedule_actual:datetime
+
+docker-compose exec web bin/rails generate model Category name:string
+
+
+docker-compose exec web bin/rails generate model Lab name:string
+
+docker-compose exec web bin/rails db:migrate
+
+mysqlを日本語化したら、コンテナを作り直すだけでなく、テーブルも削除して作り直さなければいけない(マイグレーションリセット)
+
+
+備品は1個につき、1登録とする。
+同じ種類の備品が複数ある場合はそれぞれ別に登録する必要がある。
+isbnは必ず一意である必要がある。
+同じ種類と言って、同じisbnで登録してはならない。
+
+
+備品の検索は、クエリーパラメータにcategoryNameとequipmentNameを用いる
+検索する場合はどちらか一方に検索したい値を入力して、もう一方をnoneとする。
+もしも、どちらにも値を入力した場合は、categoryNameが優先される。
+
+画像はimgパスを指定しておけば、CDNの形でフロントから呼び出して使用できる

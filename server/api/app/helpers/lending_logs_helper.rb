@@ -1,0 +1,2 @@
+module LendingLogsHelper
+end

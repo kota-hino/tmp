@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: MyString
+  loan_date: MyString
+  return_schedule: MyString
+  return_schedule_actual: MyString
+  image: 
+
+two:
+  user_id: MyString
+  loan_date: MyString
+  return_schedule: MyString
+  return_schedule_actual: MyString
+  image: 
